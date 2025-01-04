@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connected Coaching & Consulting - Empowering Growth, Transforming Lives</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <style>
+        .bubble-button {
+            position: relative;
+            padding: 10px 20px;
+            color: #4a5568; /* text-gray-600 */
+            transition: color 0.3s ease;
+        }
+
+        .bubble-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 100%;
+            height: 100%;
+            background-color: rgba(13, 148, 136, 0.1); /* teal-600 with opacity */
+            border-radius: 30px;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .bubble-button:hover {
+            color: #0d9488; /* text-teal-600 */
+        }
+
+        .bubble-button:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .relative:hover .dropdown-content {
+        display: block;
+        }
+
+        .hero-heading {
+        font-family: 'Bubblegum Sans', cursive;
+        }
+
+
+        
+
+        
+    }
+
+    .relative:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content {
+        min-width: 150px;
+        z-index: 1;
+    }
+
+    .bg-hero-image {
+    background-image: url('index_banner1.png');
+    }
+    .bg-hero-image2 {
+    background-image: url('index_banner2.png');
+    }
+    </style>
+</head>
+<body class="bg-white text-black">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 h-16">
+        <div class="container mx-auto flex flex-wrap justify-between items-center h-full">
+            <!-- Company Logo -->
+            <img src="path_to_logo.png" alt="Connected Coaching & Consulting Logo" class="h-full w-auto py-2">
+            <h1 class="text-xl font-bold text-teal-600 whitespace-nowrap">Connected Coaching & Consulting</h1>
+            
+            <!-- Navigation Bar -->
+            <nav class="hidden md:flex space-x-2">
+                <a href="index.html" class="bubble-button whitespace-nowrap">Home</a>
+                <div class="relative inline-block">
+                    <button class="bubble-button whitespace-nowrap">About</button>
+                    <div class="dropdown-content hidden absolute bg-white shadow-md mt-2 py-2 rounded-md">
+                        <a href="about.html#me" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Me</a>
+                        <a href="about.html#program" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Program</a>
+                    </div>
+                </div>
+                <div class="relative inline-block">
+                    <button class="bubble-button whitespace-nowrap">Services</button>
+                    <div class="dropdown-content hidden absolute bg-white shadow-md mt-2 py-2 rounded-md">
+                        <a href="services.html#group" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Confident Kids Coaching</a>
+                        <a href="services.html#1on1" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Personalized Coaching</a>
+                    </div>
+                </div>
+                
+                <a href="https://forms.gle/dDbxdmzhCLjb1Bob8" class="bubble-button whitespace-nowrap">Book a Session</a>
+            </nav>
+            
+            <!-- Language Switcher -->
+            <a href="index_jp.html" class="bubble-button bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-500">日本語</a>
+        </div>
+    </header>
+
+   <!-- Hero Section -->
+   <section class="min-h-screen bg-hero-image bg-cover bg-center text-base text-center py-8 md:py-16 px-4 md:px-8">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-6xl hero-heading">Empowering Growth, <br> Fostering Self-leadership</h2>
+      <p class="mt-2 md:mt-4 text-base md:text-lg lg:text-4xl hero-heading">Story-based life coaching for kids</p>
+    </div>
+  </section>
+  
+  <section id="about" class="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto flex">
+      <div class="w-2/3">
+        <h3 align="left" class="text-2xl font-bold text-teal-600">Has your child ever:</h3>
+        <p align="left" class="mt-4 text-lg sm:text-base md:text-lg text-gray-700">
+          felt very down at the face of failure? <br>
+          blamed others for their own mistakes? <br>
+          Been afraid and anxious of certain activities? <br>
+          Struggled to adapt to new changes in their environment? <br>
+          Been disrespectful to family, teachers, or peers? <br>
+          Been caught lying to you, teachers, or peers? <br>
+        </p>
+      </div>
+      <div class="w-1/3">
+        <img src="index_image1.png" alt="Child facing challenges" class="w-full h-auto">
+      </div>
+    </div>
+  </section>
+
+    </section>
+
+    <!-- Hero Section -->
+    <section class="bg-hero-image2 bg-cover bg-center text-base text-center py-8 md:py-16 px-4 md:px-8">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold sm:text-3xl hero-heading">Then I'm the right person for you!</h2>
+            </div>
+        </div>
+    </section>  
+
+    <!-- Services intro section -->
+    <section id="services" class="py-16 bg-white px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto">
+          <div class="flex flex-wrap items-center">
+            <div class="w-full md:w-1/3 pr-4">
+              <img src="index_image2.png" alt="Skills Development" class="w-full h-auto">
+            </div>
+            <div class="w-full md:w-2/3">
+              <h3 align="right" class="text-2xl font-bold text-teal-600">What skills can I help kids develop?</h3>
+              <p align="right" class="mt-4 text-lg sm:text-base md:text-lg text-gray-700">
+                - Growth mindset<br>
+                - Confidence and self-esteem<br>
+                - Self-leadership<br>
+                - Resilience and Coping skills<br>
+                - Happiness<br>
+                - Goal-setting and Achievement<br>
+              </p>
+              <div class="mt-6">
+                <a href="#contact" class="bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-500">Get Started Today</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold text-teal-600">Meet the Team</h3>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <!-- Lu Le - Founder -->
+                <div class="p-6 border rounded shadow-sm">
+                    <img src="path_to_lu_le_photo.jpg" alt="Lu Le" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h4 class="text-xl font-semibold">Lu Le</h4>
+                    <p class="mt-4 text-lg text-gray-700">Founder & Life Coach</p>
+                    <p class="mt-2">Le is a passionate life coach dedicated to empowering children to unlock their full potential. With certifications from the International Coach Federation (ICF) and Adventures in Wisdom, she guides young minds towards a confident, resilient, and happy life. Drawing on years of experience, Le helps children build self-awareness, develop essential mindset skills, and embrace challenges with courage and enthusiasm.</p>
+                </div>
+                <!-- Huang Bangyan - CTO -->
+                <div class="p-6 border rounded shadow-sm">
+                    <img src="path_to_huang_bangyan_photo.jpg" alt="Huang Bangyan" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h4 class="text-xl font-semibold">Huang Bangyan</h4>
+                    <p class="mt-4 text-lg text-gray-700">Chief Technology Officer</p>
+                    <p class="mt-2">Huang Bangyan is a technology visionary with expertise in building innovative solutions that empower organizations. As CTO, he leads the technical direction of the company, ensuring the latest advancements in tech are incorporated into their coaching processes and services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold text-teal-600">Contact Us</h3>
+            <p class="mt-4 text-lg sm:text-base md:text-lg text-gray-700">Have questions or want to book a session? Get in touch with us!</p>
+            <p class="mt-2 text-lg sm:text-base md:text-lg text-gray-700">Email: <a href="mailto:info@connectedcoaching.jp" class="text-teal-600">info@connectedcoaching.jp</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-600 text-white text-center py-4">
+        <p>&copy; 2024 Connected Coaching & Consulting. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const dropdownButtons = document.querySelectorAll('.relative button');
+        
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const dropdownContent = this.nextElementSibling;
+                dropdownContent.classList.toggle('hidden');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            dropdownButtons.forEach(button => {
+                const dropdownContent = button.nextElementSibling;
+                if (!button.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.classList.add('hidden');
+                }
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>
