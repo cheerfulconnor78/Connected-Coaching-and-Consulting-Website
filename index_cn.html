@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connected Coaching & Consulting - 赋能成长，改变人生</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <style>
+        * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+         }
+         
+         body, html {
+           margin: 0;
+           padding: 0;
+           width: 100%;
+           overflow-x: hidden;
+         }
+         
+         .bubble-button {
+           position: relative;
+           padding: 10px 20px;
+           color: #4a5568;
+           transition: color 0.3s ease;
+         }
+         
+         .bubble-button::before {
+           content: '';
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%) scale(0);
+           width: 100%;
+           height: 100%;
+           background-color: rgba(13, 148, 136, 0.1);
+           border-radius: 30px;
+           transition: transform 0.3s ease;
+           z-index: -1;
+         }
+         
+         .bubble-button:hover {
+           color: #0d9488;
+         }
+         
+         .bubble-button:hover::before {
+           transform: translate(-50%, -50%) scale(1);
+         }
+         
+         .hero-heading {
+           font-family: 'Bubblegum Sans', cursive;
+         }
+         
+         .clearfix::after {
+           content: "";
+           clear: both;
+           display: table;
+         }
+         
+         .relative:hover .dropdown-content,
+         .dropdown-content:hover {
+           display: block;
+         }
+         
+         .dropdown-content a {
+           display: block;
+           padding: 0.5rem 1rem;
+           color: #4a5568;
+           transition: background-color 0.2s ease;
+         }
+         
+         .dropdown-content a:hover {
+           background-color: #f3f4f6;
+         }
+         
+         .bg-hero-image { background-image: url('about_hero1.png'); }
+         .bg-hero-image2 { background-image: url('about_banner1.png'); }
+         .bg-hero-image3 { background-image: url('about_banner2.png'); }
+         .bg-hero-image4 { background-image: url('about_banner3.png'); }
+         
+         .story-container {
+           display: flex;
+           flex-direction: column;
+           gap: 15px;
+           margin-top: 20px;
+         }
+         
+         .story-item {
+           display: flex;
+           align-items: center;
+           gap: 15px;
+         }
+         
+         .story-circle {
+           width: 40px;
+           height: 40px;
+           border-radius: 50%;
+           background-color: #f46e3d;
+           color: black;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-weight: bold;
+           font-size: 20px;
+           flex-shrink: 0;
+         }
+         
+         .story-item p {
+           margin: 0;
+         }
+         
+         .mobile-dropdown {
+           position: absolute;
+           top: 100%;
+           left: 0;
+           right: 0;
+           background-color: white;
+           box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+           z-index: 50;
+           display: none;
+         }
+         
+         .mobile-dropdown.show {
+           display: block;
+         }
+         
+         @media screen and (max-width: 768px) {
+           .header {
+             height: auto;
+             padding: 10px;
+           }
+           
+           .mobile_header {
+             height: 60px;
+           }
+           
+           h1.text-xl {
+             font-size: 0.875rem;
+           }
+           
+           .bubble-button {
+             padding: 8px 12px;
+             font-size: 14px;
+           }
+           
+           .container {
+             padding: 0 10px;
+           }
+           
+           .clearfix img {
+             width: 100%;
+             float: none;
+             margin: 0 0 1rem 0;
+           }
+           
+           .flex.flex-wrap {
+             flex-direction: column;
+           }
+           
+           .w-full.md\:w-1\/3, .w-full.md\:w-2\/3 {
+             width: 100%;
+           }
+           
+           .grid.md\:grid-cols-2.lg\:grid-cols-3 {
+             grid-template-columns: 1fr;
+           }
+           
+           .story-item {
+             padding: 10px;
+           }
+           
+           .story-circle {
+             min-width: 35px;
+             height: 35px;
+             font-size: 16px;
+           }
+           
+           .mobile-menu {
+             display: block;
+             cursor: pointer;
+           }
+           
+           nav.hidden.md\:flex {
+             display: none;
+           }
+         }
+         </style>
+</head>
+<body class="bg-white text-black">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Left side: Logo and Company Name -->
+                <div class="flex items-center space-x-4">
+                    <img src="path_to_logo.png" alt="Connected Coaching & Consulting Logo" class="h-12 w-auto">
+                    <h1 class="text-sm md:text-base lg:text-xl font-bold text-teal-600 whitespace-nowrap">Connected Coaching & Consulting</h1>
+                </div>
+
+                <!-- Center: Navigation -->
+                <nav class="hidden md:flex items-center space-x-2">
+                    <a href="index_cn.html" class="bubble-button text-sm whitespace-nowrap">首页</a>
+                    <div class="relative">
+                      <button class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="about">关于我们</button>
+                      <div class="dropdown-content hidden absolute bg-white shadow-md mt-2 py-2 rounded-md" id="about-dropdown">
+                        <a href="about_cn.html#me" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">关于我</a>
+                        <a href="about_cn.html#program" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">项目</a>
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <button class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="services">服务</button>
+                      <div class="dropdown-content hidden absolute bg-white shadow-md mt-2 py-2 rounded-md" id="services-dropdown">
+                        <a href="services_cn.html#group" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">自信儿童辅导</a>
+                        <a href="services_cn.html#1on1" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">个性化辅导</a>
+                        <a href="services_cn.html#faq" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">常见问题</a>
+                      </div>
+                    </div>
+                    <a href="https://forms.gle/dDbxdmzhCLjb1Bob8" class="bubble-button text-sm whitespace-nowrap">预约课程</a>
+                  </nav>
+
+                <!-- Right side: Language and Mobile Menu -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="bubble-button bg-teal-600 text-white text-sm px-3 py-1 rounded hover:bg-teal-500">English</a>
+                    <button class="md:hidden mobile-menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div class="mobile-dropdown">
+                <a href="index_cn.html" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">首页</a>
+                <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200">关于我们</button>
+                <div class="pl-4 hidden">
+                    <a href="about_cn.html#me" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">关于我</a>
+                    <a href="about_cn.html#program" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">项目</a>
+                </div>
+                <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200">服务</button>
+                <div class="pl-4 hidden">
+                    <a href="services_cn.html#group" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">自信儿童辅导</a>
+                    <a href="services_cn.html#1on1" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">个性化辅导</a>
+                    <a href="services_cn.html#faq" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">常见问题</a>
+                </div>
+                <a href="https://forms.gle/dDbxdmzhCLjb1Bob8" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">预约课程</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="min-h-screen bg-hero-image bg-cover bg-center text-base text-center py-8 md:py-16 px-4 md:px-8">
+        <div class="container mx-auto flex flex-col items-center justify-center">
+            <h2 class="text-3xl md:text-4xl lg:text-6xl hero-heading mb-4">
+                赋能成长，<br class="block">培养自我领导力
+            </h2>
+            <p class="mt-2 md:mt-4 text-base md:text-lg lg:text-4xl hero-heading">
+                为孩子提供智慧辅导
+            </p>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto flex flex-col md:flex-row">
+            <div class="w-full md:w-2/3">
+                <h3 class="text-2xl font-bold text-teal-600">您的孩子是否曾经：</h3>
+                <p class="mt-4 text-lg sm:text-base md:text-lg text-gray-700">
+                    - 在面对失败时感到非常沮丧？<br>
+                    - 把自己的错误归咎于他人？<br>
+                    - 对某些活动感到恐惧和焦虑？<br>
+                    - 难以适应新的环境变化？<br>
+                    - 对表达自己的想法感到不舒服？<br>
+                    - 容易受到朋友的影响？<br>
+                    - 对家人、老师或同龄人不尊重？<br>
+                    - 被发现对您、老师或同龄人说谎？<br>
+                </p>
+            </div>
+            <div class="w-full md:w-1/3 mt-4 md:mt-0">
+                <img src="index_image1.png" alt="孩子面临挑战" class="w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section 2 -->
+    <section class="bg-hero-image2 bg-cover bg-center text-base text-center py-8 md:py-16 px-4 md:px-8">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold sm:text-3xl hero-heading">孩子们通过智慧辅导学习强大的心态技能和成功原则。</h2>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-2/3">
+                    <p class="mt-4 text-lg sm:text-base md:text-lg text-gray-700">
+                        - 学习如何识别和转变限制性信念，以及如何主动创造支持性的信念。<br>
+                        - 学习即使事情不如意，也能对自己感觉良好。<br>
+                        - 学习在经历失望后如何相信自己，以便他们能够克服沮丧和恐惧。<br>
+                        - 学习如何独立思考和做决定。<br>
+                        - 学习如何应对变化。<br>
+                        - 了解对自己生活负全部责任的力量，生活诚信的重要性，以及尊重他人的重要性。<br>
+                        - 学习如何培养成功的心态，包括学习如何设定和实现目标。<br>
+                    </p>
+                    <div class="mt-6">
+                        <a href="#contact" class="bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-500">立即开始</a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 mt-4 md:mt-0 md:pl-4">
+                    <img src="index_image2.png" alt="技能发展" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Team Section -->
+<section id="team" class="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto">
+        <h3 class="text-2xl font-bold text-teal-600 text-center mb-8">团队介绍</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- 陆乐 - 创始人 -->
+            <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md">
+                <img src="path_to_lu_le_photo.jpg" alt="陆乐" class="w-48 h-48 rounded-full mb-6">
+                <div class="text-center">
+                    <h4 class="text-xl font-semibold mb-2">陆乐</h4>
+                    <p class="text-gray-600 mb-4">创始人兼生活教练</p>
+                    <p class="text-gray-700 leading-relaxed">
+                        乐是一位充满激情的生活教练，致力于赋能儿童释放他们的全部潜能。凭借国际教练联合会（ICF）和智慧冒险（Adventures in Wisdom）的认证，她引导年轻的心灵走向自信、坚韧和快乐的生活。凭借多年的经验，乐帮助孩子们建立自我意识，发展必要的心态技能，并以勇气和热情迎接挑战。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 黄邦彦 - 首席技术官 -->
+            <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md">
+                <img src="path_to_huang_bangyan_photo.jpg" alt="黄邦彦" class="w-48 h-48 rounded-full mb-6">
+                <div class="text-center">
+                    <h4 class="text-xl font-semibold mb-2">黄邦彦</h4>
+                    <p class="text-gray-600 mb-4">首席技术官</p>
+                    <p class="text-gray-700 leading-relaxed">
+                        黄邦彦是一位技术远见者，擅长构建赋能组织的创新解决方案。作为首席技术官，他领导公司的技术方向，确保将最新的技术进步融入到他们的辅导流程和服务中。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold text-teal-600">联系我们</h3>    
+            <p class="mt-4 text-lg sm:text-base md:text-lg text-gray-700">有任何问题或想预约课程？请联系我们！</p>
+            <p class="mt-2 text-lg sm:text-base md:text-lg text-gray-700">电子邮件：<a href="mailto:info@connectedcoaching.jp" class="text-teal-600">info@connectedcoaching.jp</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-600 text-white text-center py-4">
+        <p>&copy; 2024 Connected Coaching & Consulting. 保留所有权利。</p>
+    </footer>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+       const mobileMenuButton = document.querySelector('.mobile-menu');
+       const mobileDropdown = document.querySelector('.mobile-dropdown');
+       const dropdownButtons = document.querySelectorAll('.mobile-dropdown > button');
+       const desktopDropdownToggles = document.querySelectorAll('.dropdown-toggle');
+     
+       mobileMenuButton.addEventListener('click', function() {
+         mobileDropdown.classList.toggle('show');
+       });
+     
+       dropdownButtons.forEach(button => {
+         button.addEventListener('click', function() {
+           const submenu = this.nextElementSibling;
+           submenu.classList.toggle('hidden');
+         });
+       });
+     
+       desktopDropdownToggles.forEach(toggle => {
+         toggle.addEventListener('click', function(e) {
+           e.stopPropagation();
+           const dropdownId = this.getAttribute('data-dropdown');
+           const dropdown = document.querySelector(`#${dropdownId}-dropdown`);
+           
+           // Close all other dropdowns
+           document.querySelectorAll('.dropdown-content').forEach(d => {
+             if (d !== dropdown) {
+               d.classList.add('hidden');
+             }
+           });
+           
+           // Toggle the clicked dropdown
+           dropdown.classList.toggle('hidden');
+         });
+       });
+     
+       document.addEventListener('click', function(e) {
+         if (!mobileMenuButton.contains(e.target) && !mobileDropdown.contains(e.target)) {
+           mobileDropdown.classList.remove('show');
+         }
+         if (!e.target.closest('.relative')) {
+           document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+             dropdown.classList.add('hidden');
+           });
+         }
+       });
+     });
+     
+     
+         </script>
+
+</body>
+</html>
