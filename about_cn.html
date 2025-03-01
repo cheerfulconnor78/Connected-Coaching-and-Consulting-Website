@@ -20,6 +20,11 @@ body, html {
   overflow-x: hidden;
 }
 
+
+* {
+    font-family: 'KaiTi', 'STKaiti', 'BiauKai', serif;
+}
+
 .bubble-button {
   position: relative;
   padding: 10px 20px;
@@ -49,9 +54,7 @@ body, html {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.hero-heading {
-  font-family: 'Bubblegum Sans', cursive;
-}
+
 
 .clearfix::after {
   content: "";
@@ -187,6 +190,8 @@ body, html {
     display: none;
   }
 }
+
+         
 </style>
     
 </head>
@@ -207,19 +212,20 @@ body, html {
                     <div class="relative">
                       <button class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="about">关于我们</button>
                       <div class="dropdown-content hidden absolute bg-white shadow-md mt-2 py-2 rounded-md" id="about-dropdown">
-                        <a href="about_cn.html#me" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">关于我</a>
-                        <a href="about_cn.html#program" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">项目</a>
+                        <a href="about_cn.html#me" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">关于成长教练</a>
+                        <a href="about_cn.html#program" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">关于课程</a>
                       </div>
                     </div>
                     <div class="relative">
                       <button class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="services">服务</button>
                       <div class="dropdown-content hidden absolute bg-white shadow-md mt-2 py-2 rounded-md" id="services-dropdown">
                         <a href="services_cn.html#group" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">自信儿童辅导</a>
+                        <a href="poster_cn.png" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" target="_blank">更多内容</a>
                         <a href="services_cn.html#1on1" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">个性化辅导</a>
                         <a href="services_cn.html#faq" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">常见问题</a>
                       </div>
                     </div>
-                    <a href="https://forms.gle/dDbxdmzhCLjb1Bob8" class="bubble-button text-sm whitespace-nowrap">预约课程</a>
+                    <a href="https://forms.gle/gAEDk4SEbSSTN53B6" class="bubble-button text-sm whitespace-nowrap">预约免费咨询</a>
                   </nav>
 
                 <!-- Right side: Language and Mobile Menu -->
@@ -263,14 +269,13 @@ body, html {
     <!-- About me section-->
     <section id="me" class="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto">
-          <h3 class="text-2xl font-bold text-teal-600 mb-4">陆 乐</h3>
           <div class="clearfix">
             <img src="path_to_lu_le_photo.jpg" alt="Le" class="float-left mr-4 mb-2 rounded-lg w-1/3 md:w-1/4">
             <p class="text-lg sm:text-base md:text-lg text-gray-700">
               挑战意味着风险，也意味着机遇。 <br> <br>                在课堂上提问，在老师同学面前演讲或者表演，申请校队，报名参加各种形式的竞赛等等。孩子几乎每天都会面对一些让自己感到胆怯或者紧张的挑战，他们是敢于走出舒适区，乐于追求自我成长，还是害怕失败，回避风险呢？你希望如何帮助他们做出选择？<br> <br>
 			  但有的时候并不是孩子的选择，他们不得不面临生活的挑战。跟随父母移民海外，父母离异，亲人离世，搬家转学等等。面对并非本意的环境改变，你希望如何帮助他们经历挑战？<br> <br>我是乐乐，帮助所有面对挑战怯然止步，走进挑战惶然无措的孩子们勇敢前行的成长教练。我曾经十多年在数家世界财富500强公司任职，并担任团队领导。出于对自我认知和自我成长的热情，我转换了职业发展赛道，成为了一名成长教练。在我帮助客户提升自我化解人生难题的教练过程中，我发现牵绊他们成长的局限思维许多都在幼年期形成，我们的教育缺失了具体可行的对孩子情绪思维模式的培养。<br> <br>
 			  我希望通过帮助孩子提高对情绪的自我意识和管理，重塑大脑的思维模式，增强自信，勇于接受挑战，点燃无限的潜能，从小活出积极蓬勃的人生。<br> <br>
-			  我是国际教练协会（ICF）的认证教练，美国少儿教育机构“Adventures in Wisdom”的认证少儿教练。社会心理学硕士，工商管理学硕士。出生於上海，在日本和香港经历了求学和职业生涯的发展，目前居住在东京。<br> <br>               
+			  我是国际教练协会（ICF）的认证教练，美国少儿教育机构“Adventures in Wisdom”的认证智慧教练（WISDOM Coach<sup>TM</sup>）。社会心理学硕士，工商管理学硕士。出生於上海，在日本和香港经历了求学和职业生涯的发展，目前居住在东京。<br> <br>               
                 </p>
         </div>
     </section>
@@ -288,89 +293,10 @@ body, html {
     <div class="container mx-auto">
         <h2 class="text-3xl md:text-4xl lg:text-5xl hero-heading text-center text-teal-600 mb-8">关于“Adventures in Wisdom” 儿童成长教练课程：</h2>
         
-        <p class="text-lg mb-6">程设计来自美国著名少儿培训教育机构 Adventures in Wisdom™， 以6-12岁儿童为对象，旨在帮助孩子从小建立自我认同，树立自信，提高韧性，培养自我领导力和积极乐观的27项思维模式技能。该课程十多年来已经在30个国家推广实践，树立了良好的声誉，心灵鸡汤的共同创始者Jack Canfield也对该课程倍加推崇。
-		我们独特的教练方式是，通过和孩子分享原创故事的形式介绍所学的思维模式技能，然后运用教练的方式和孩子互动，倾听孩子的真实经历和想法感受，讨论故事中的情节以及如何把思维模式技能拓展应用到实际生活的场景中。每次课后，不仅帮助孩子设立技能实践小目标，也和家长分享学习内容以及家庭中亲子互动的建议。在新的课程开始前，和孩子一起复习上一次学习的思维模式技能，并确认课后实践的情况。</p>
+        <p class="text-lg mb-6">該課程设计来自美国著名少儿培训教育机构 Adventures in Wisdom™， 以6-12岁儿童为对象，旨在帮助孩子从小建立自我认同，树立自信，提高韧性，培养自我领导力和积极乐观的27项思维模式技能。该课程十多年来已经在30个国家推广实践，树立了良好的声誉，心灵鸡汤的共同创始者Jack Canfield也对该课程倍加推崇。
+		<br><br>我们独特的教练方式是，通过和孩子分享原创故事的形式介绍所学的思维模式技能，然后运用教练的方式和孩子互动，倾听孩子的真实经历和想法感受，讨论故事中的情节以及如何把思维模式技能拓展应用到实际生活的场景中。每次课后，不仅帮助孩子设立技能实践小目标，也和家长分享学习内容以及家庭中亲子互动的建议。在新的课程开始前，和孩子一起复习上一次学习的思维模式技能，并确认课后实践的情况。</p>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-            <div class="bg-blue-100 p-6 rounded-lg">
-                <h3 class="text-2xl text-teal-600 mb-4"><em><b>MindPower</b></em></h3>
-                <ul class="list-disc pl-5">
-                    <li>How your mind shapes your world</li>
-                    <li>Creating possibilities</li>
-                    <li>Neural pathways</li>
-                    <li>Reticular Activating System (RAS)</li>
-                    <li>Power Shifting</li>
-                </ul>
-            </div>
-            <div class="bg-green-100 p-6 rounded-lg">
-                <h3 class="text-2xl text-teal-600 mb-4"><em><b>InnerPower</b></em></h3>
-                <ul class="list-disc pl-5">
-                    <li>Self-responsibility</li>
-                    <li>Integrity</li>
-                    <li>Respect</li>
-                    <li>Self-respect</li>
-                    <li>Making Decisions</li>
-                    <li>Peer Pressure</li>
-                </ul>
-            </div>
-            <div class="bg-red-100 p-6 rounded-lg">
-                <h3 class="text-2xl text-teal-600 mb-4"><em><b>MePower</b></em></h3>
-                <ul class="list-disc pl-5">
-                    <li>Self-esteem</li>
-                    <li>Honor Your Uniqueness</li>
-                    <li>Self-confidence</li>
-                    <li>Self-talk</li>
-                    <li>Self-coaching</li>
-                </ul>
-            </div>
-            <div class="bg-purple-100 p-6 rounded-lg">
-                <h3 class="text-2xl text-teal-600 mb-4"><em><b>DreamPower</b></em></h3>
-                <ul class="list-disc pl-5">
-                    <li>Vision</li>
-                    <li>Goal Setting</li>
-                    <li>Law of Attraction</li>
-                    <li>Visualization</li>
-                    <li>Affirmations</li>
-                    <li>Gratitude</li>
-                </ul>
-            </div>
-            <div class="bg-yellow-100 p-6 rounded-lg">
-                <h3 class="text-2xl text-teal-600 mb-4"><em><b>Slaying Dragons</b></em></h3>
-                <ul class="list-disc pl-5">
-                    <li>Mistakes</li>
-                    <li>Fear</li>
-                    <li>Failure</li>
-                    <li>Change</li>
-                    <li>Conditional Thinking</li>
-                </ul>
-            </div>
-        </div>
-        <div class="story-container">
-
-            <h3 class="text-2xl text-teal-600 mb-4"><em><b>The Adventures in Wisdom® STORY Coaching Process</b></em></h3>
-            <p class="mb-4">A powerful coaching model to get results for children:</p>
-            <div class="story-item">
-              <div class="story-circle">S</div>
-              <p>Share the coaching story to introduce the skill</p>
-            </div>
-            <div class="story-item">
-              <div class="story-circle">T</div>
-              <p>Talk about how the story applies to their lives</p>
-            </div>
-            <div class="story-item">
-              <div class="story-circle">O</div>
-              <p>Organize art projects and role-playing for hands-on experience</p>
-            </div>
-            <div class="story-item">
-              <div class="story-circle">R</div>
-              <p>Review with parent – Share a WISDOM for home sheet</p>
-            </div>
-            <div class="story-item">
-              <div class="story-circle">Y</div>
-              <p>Yes! Confirm knowledge with Wise in Fives at the start of each new session</p>
-            </div>
-          </div>
-        <p><br><i>From "Life Coaching Program" from Kids for Kids Curriculum, Adventures in Wisdom Inc, Copyright ©2024.</i></p>
+       
     </div>
 </section>
 
@@ -383,19 +309,20 @@ body, html {
         </div>
     </section>  
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white px-4 sm:px-6 lg:px-8">
-        <div class="container mx-auto text-center">
-            <h3 class="text-2xl font-bold text-teal-600">联系我们</h3>
-            <p class="mt-4 text-lg sm:text-base md:text-lg text-gray-700">如果您有任何疑问或对我们的服务感兴趣，欢迎预约免费咨询！</p>
-            <p class="mt-2 text-lg sm:text-base md:text-lg text-gray-700">电子邮件：<a href="mailto:info@connectedcoaching.jp" class="text-teal-600">info@connectedcoaching.jp</a></p>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white px-4 sm:px-6 lg:px-8">
+          <div class="container mx-auto text-center">
+              <h3 class="text-2xl font-bold text-teal-600">联系我们</h3>    
+              <p class="mt-4 text-lg sm:text-base md:text-lg text-gray-700">如果您有任何疑问或对我们的服务感兴趣，欢迎预约免费咨询！</p>
+              <p class="mt-2 text-lg sm:text-base md:text-lg text-gray-700">电子邮件： <a href="mailto:info@connectedcoaching.jp" class="text-teal-600">info@connectedcoaching.jp</a></p>
+              <p class="mt-4 text-lg sm:text-base md:text-lg text-gray-700"><em>Copyright 2024 Connected Coaching & Consulting.</em></p>
+          </div>
+      </section>
 
-    <!-- Footer -->
-    <footer class="bg-teal-600 text-white text-center py-4">
-        <p>&copy; 2024 Connected Coaching & Consulting. All Rights Reserved.</p>
-    </footer>
+      <!-- Footer -->
+      <footer class="bg-teal-600 text-white text-center py-4">
+          <p>&copy; 2024 Connected Coaching & Consulting. All Rights Reserved.</p>
+      </footer>
 
     <script>
    document.addEventListener('DOMContentLoaded', function() {
