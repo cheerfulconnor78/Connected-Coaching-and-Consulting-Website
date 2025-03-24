@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赋能成长，改变人生 - 成功案例</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .bubble-button {
+      position: relative;
+      padding: 10px 20px;
+      color: #4a5568;
+      transition: color 0.3s ease;
+    }
+
+    .bubble-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 100%;
+      height: 100%;
+      background-color: rgba(13, 148, 136, 0.1);
+      border-radius: 30px;
+      transition: transform 0.3s ease;
+      z-index: -1;
+    }
+
+    .bubble-button:hover {
+      color: #0d9488;
+    }
+
+    .bubble-button:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .hero-heading {
+      font-family: 'Bubblegum Sans', cursive;
+    }
+
+    .bg-hero-image {
+      background-image: url('index_banner1.png');
+    }
+
+    .bg-hero-image2 {
+      background-image: url('index_banner2.png');
+    }
+
+    .mobile-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 50;
+    }
+
+    .mobile-dropdown.show {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu {
+        display: block;
+      }
+      .desktop-menu {
+        display: none;
+      }
+      h1.text-xl {
+        font-size: 0.875rem;
+      }
+      .bubble-button {
+        padding: 6px 10px;
+        font-size: 14px;
+      }
+      .container {
+        padding: 0 0.5rem;
+      }
+      .hero-heading {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    * {
+      font-family: 'KaiTi', 'STKaiti', 'BiauKai', serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-black">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- 左侧：Logo和公司名称 -->
+        <div class="flex items-center space-x-4">
+          <img src="path_to_logo.png" alt="Connected Coaching & Consulting Logo" class="h-12 w-auto">
+          <h1 class="text-sm md:text-base lg:text-xl font-bold text-teal-600 whitespace-nowrap">Connected Coaching & Consulting</h1>
+        </div>
+        <!-- 中间：导航 -->
+        <nav class="hidden md:flex items-center space-x-2">
+          <a href="index_cn.html" class="bubble-button text-sm whitespace-nowrap">首页</a>
+          <div class="relative">
+            <button class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="about">关于我们</button>
+            <div class="dropdown-content hidden absolute bg-white shadow-md mt-2 py-2 rounded-md" id="about-dropdown">
+              <a href="about_cn.html#me" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">关于成长教练</a>
+              <a href="about_cn.html#program" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">关于课程</a>
+            </div>
+          </div>
+          <div class="relative">
+            <button class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="services">服务</button>
+            <div class="dropdown-content hidden absolute bg-white shadow-md mt-2 py-2 rounded-md" id="services-dropdown">
+              <a href="services_cn.html#group" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">自信儿童辅导</a>
+              <a href="services_cn.html#1on1" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">个性化辅导</a>
+              <a href="services_cn.html#faq" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">常见问题</a>
+            </div>
+          </div>
+          <a href="case_cn.html" class="bubble-button text-sm whitespace-nowrap">成功案例</a>
+          <a href="https://forms.gle/gAEDk4SEbSSTN53B6" class="bubble-button text-sm whitespace-nowrap">预约免费咨询</a>
+        </nav>
+        <!-- 右侧：语言切换和移动端菜单 -->
+        <div class="flex items-center space-x-2">
+          <a href="index.html" class="bubble-button bg-teal-600 text-white text-sm px-3 py-1 rounded hover:bg-teal-500">English</a>
+          <button class="md:hidden mobile-menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- 移动端下拉菜单 -->
+      <div class="mobile-dropdown">
+        <a href="index_cn.html" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">首页</a>
+        <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200">关于我们</button>
+        <div class="pl-4 hidden">
+          <a href="about_cn.html#me" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">关于成长教练</a>
+          <a href="about_cn.html#program" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">关于课程</a>
+        </div>
+        <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200">服务</button>
+        <div class="pl-4 hidden">
+          <a href="services_cn.html#group" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">自信儿童辅导</a>
+          <a href="services_cn.html#1on1" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">个性化辅导</a>
+          <a href="services_cn.html#faq" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">常见问题</a>
+        </div>
+        <a href="https://forms.gle/gAEDk4SEbSSTN53B6" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">预约免费咨询</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen bg-hero-image bg-cover bg-center text-base text-center py-8 md:py-16 px-4 md:px-8">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-6xl hero-heading">成功案例</h2>
+    </div>
+  </section>
+
+  <!-- 案例1 -->
+  <section class="py-16 bg-white px-4 sm:px-6 lg:px-8" id="case1">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-start">
+        <div class="w-full md:w-1/3 pr-4 mb-4 md:mb-0">
+          <img src="service_image1.png" alt="案例1 - 亮亮" class="w-full h-auto rounded-lg shadow-md">
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="text-2xl font-bold text-teal-600">案例1：一个6岁男孩 — “我不是零！”</h3>
+          <p class="mt-4 text-lg text-gray-700">
+            亮亮是个6岁的男孩。他在学校里不断收到老师的批评和投诉，这些批评和投诉伤害了他的自尊心。每当亮亮的行为没有遵守老师要求时，他的老师就说他“总是很不好”。老师没有看到亮亮做的任何好的事情。尽管亮亮很想努力“变好”，但这些负面的信息还是进入了他的脑海，他开始相信自己就是一个“总是很不好”的学生。
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            结果，亮亮停止了努力。他开始在课堂上表现出不守规矩的行为，比如一完成作业就离开座位，在教室的其他区域走动。在开始接受教练之前，亮亮的行为记录连续两个月每天都被评为“零”！亮亮的心态已经变得非常糟糕，以至于当他的母亲问他“今天过得怎么样？”时，亮亮就回答：“我又得了零分！”
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            通过分享“谁在驾驶你的飞机？”和“力量眼镜”的故事，成长教练帮助亮亮理解了他的思维模式如何形成了目前他对自己以及周围环境的看法。他明白了他可以成为“自己想法的飞行员”，并且可以选择将自己一直视为一个好孩子。他永远不是零。零只是一个数字，而不是“他”。
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            亮亮的母亲曾因不知道如何应对老师或学校的制度而感到焦虑。她非常高兴地看到孩子不再是那个不想去上学的男孩，他开始挺胸抬头，相信自己是一个好孩子，可以做出好的选择。
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            在学校里，亮亮的老师也变得支持他的积极转变，允许他在小息时间带领同班同学搭建乐高城市。校长也给他安排了一份“任务”，每周一次向各教室传达校长的信息。亮亮在学校里变得快乐起来，开始充满自信。成长教练为他取得的进步感到由衷的自豪。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 案例2 -->
+  <section class="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8" id="case2">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-start">
+        <div class="w-full md:w-1/3 pr-4 mb-4 md:mb-0">
+          <img src="service_image2.png" alt="案例2 - 杰夫" class="w-full h-auto rounded-lg shadow-md">
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="text-2xl font-bold text-teal-600">案例2：一个10岁男孩 — “我可以控制我的情绪！”</h3>
+          <p class="mt-4 text-lg text-gray-700">
+            10岁的杰夫在控制自己的情绪，尤其是愤怒方面遇到了困难。老师们反映，杰夫在学校里情绪低落，并且总与其他孩子保持距离。他还经常和兄弟们打架，这让他的母亲既烦恼又无助，整个家庭的气氛也经常处于紧绷状态。
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            成长教练邀请杰夫和他妈妈一起参加了第一次课程，他们了解了大脑思维的运行方式，明白了我们的想法如何塑造世界观，而如何重塑思维模式给了他们一个巨大的“顿悟”时刻。
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            此后，杰夫单独参加了一系列教练工作坊，学习积极的自我对话和培养自尊的重要性。仅几周后，杰夫发生了明显改变——他变得快乐、自信，并拥有了许多对自己的积极想法。他分享道：“我发现我可以控制自己的情绪——而不是其他任何人。我对自己的看法取决于我自己。如果我对自己有消极想法，就会感觉不好；但如果我有积极想法，我就能转移愤怒，让心情恢复快乐。”
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            杰夫的妈妈写道：“杰夫变得快乐了，和兄弟们相处也更和睦了。他在学校里也结交了新朋友。当强烈情绪出现时，杰夫能运用所学技能阻止情绪失控。我非常感激教练的陪伴，因为我看到了杰夫和整个家庭的巨大变化。”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 案例3 -->
+  <section class="py-16 bg-white px-4 sm:px-6 lg:px-8" id="case3">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-start">
+        <div class="w-full md:w-1/3 pr-4 mb-4 md:mb-0">
+          <img src="service_image3.png" alt="案例3 - 柔伊" class="w-full h-auto rounded-lg shadow-md">
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="text-2xl font-bold text-teal-600">案例3：12岁的女孩 — 积极乐观的社群一员</h3>
+          <p class="mt-4 text-lg text-gray-700">
+            12岁的柔伊很害羞，不愿敞开心扉表达自己的感受和想法，这在这个年龄段的青少年中较为常见。
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            成长教练采用了MindPower™课程，讲述如何塑造我们的想法以及想法的重要性，同时结合MePower™课程，传授如何提高自尊、培养自信。期间还播放青少年喜爱的流行歌曲，并通过实际生活场景讨论来传授人生技能。
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            柔伊喜欢每周与成长教练一起参加工作坊，她在这里可以坦然地谈论自己的感受，并学习如何转换思维方式以避免受伤。她告诉教练：“当我发现自己有消极想法时，我会感到心里沉重，这时我知道我戴上了受害者眼镜，需要换上力量眼镜来改变思考角度！”
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            教练高兴地看到她从一个害羞、封闭、不愿参与集体活动的孩子，转变为一个乐于分享、积极乐观的社群一员。
+          </p>
+          <p class="mt-4 text-lg text-gray-700">
+            柔伊的母亲反馈道：“作为父母，有时很难读懂或理解孩子在想什么或感觉什么——尤其是在他们思维混乱、试图找到自己方向的敏感青少年时期。成长教练的工作坊为孩子们提供了交流和思考的工具，帮助他们梳理感受并应对生活中的挑战。这些技能应像阅读和数学一样在学校教授。我的女儿从中受益匪浅，我鼓励每位家长都让孩子参加。”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系我们 -->
+  <section id="contact" class="py-16 bg-white px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto text-center">
+      <h3 class="text-2xl font-bold text-teal-600">联系我们</h3>
+      <p class="mt-4 text-lg sm:text-base md:text-lg text-gray-700">如果您有任何疑问或对我们的服务感兴趣，欢迎预约免费咨询！</p>
+      <p class="mt-2 text-lg sm:text-base md:text-lg text-gray-700">电子邮件： <a href="mailto:info@connectedcoaching.jp" class="text-teal-600">info@connectedcoaching.jp</a></p>
+      <p class="mt-4 text-lg sm:text-base md:text-lg text-gray-700"><em>Copyright 2024 Connected Coaching & Consulting.</em></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-teal-600 text-white text-center py-4">
+    <p>&copy; 2024 Connected Coaching & Consulting. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.querySelector('.mobile-menu');
+      const mobileDropdown = document.querySelector('.mobile-dropdown');
+      const dropdownButtons = document.querySelectorAll('.mobile-dropdown > button');
+      const desktopDropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+      mobileMenuButton.addEventListener('click', function() {
+        mobileDropdown.classList.toggle('show');
+      });
+
+      dropdownButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const submenu = this.nextElementSibling;
+          submenu.classList.toggle('hidden');
+        });
+      });
+
+      desktopDropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const dropdownId = this.getAttribute('data-dropdown');
+          const dropdown = document.getElementById(`${dropdownId}-dropdown`);
+          
+          // 关闭所有其他下拉菜单
+          document.querySelectorAll('.dropdown-content').forEach(d => {
+            if (d !== dropdown) {
+              d.classList.add('hidden');
+            }
+          });
+
+          // 切换点击的下拉菜单
+          dropdown.classList.toggle('hidden');
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!mobileMenuButton.contains(e.target) && !mobileDropdown.contains(e.target)) {
+          mobileDropdown.classList.remove('show');
+        }
+
+        if (!e.target.closest('.relative')) {
+          document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+            dropdown.classList.add('hidden');
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
