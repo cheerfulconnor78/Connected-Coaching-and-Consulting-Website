@@ -164,6 +164,7 @@
           <a href="services_cn.html#1on1" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">个性化辅导</a>
           <a href="services_cn.html#faq" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">常见问题</a>
         </div>
+        <a href="case_cn.html" class="block py-2 px-4 text-gray-800 hover:bg-gray-200"> 成功案例 </a>
         <a href="https://forms.gle/gAEDk4SEbSSTN53B6" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">预约免费咨询</a>
       </div>
     </div>
@@ -275,54 +276,6 @@
     <p>&copy; 2024 Connected Coaching & Consulting. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuButton = document.querySelector('.mobile-menu');
-      const mobileDropdown = document.querySelector('.mobile-dropdown');
-      const dropdownButtons = document.querySelectorAll('.mobile-dropdown > button');
-      const desktopDropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-      mobileMenuButton.addEventListener('click', function() {
-        mobileDropdown.classList.toggle('show');
-      });
-
-      dropdownButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const submenu = this.nextElementSibling;
-          submenu.classList.toggle('hidden');
-        });
-      });
-
-      desktopDropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-          e.stopPropagation();
-          const dropdownId = this.getAttribute('data-dropdown');
-          const dropdown = document.getElementById(`${dropdownId}-dropdown`);
-          
-          // 关闭所有其他下拉菜单
-          document.querySelectorAll('.dropdown-content').forEach(d => {
-            if (d !== dropdown) {
-              d.classList.add('hidden');
-            }
-          });
-
-          // 切换点击的下拉菜单
-          dropdown.classList.toggle('hidden');
-        });
-      });
-
-      document.addEventListener('click', function(e) {
-        if (!mobileMenuButton.contains(e.target) && !mobileDropdown.contains(e.target)) {
-          mobileDropdown.classList.remove('show');
-        }
-
-        if (!e.target.closest('.relative')) {
-          document.querySelectorAll('.dropdown-content').forEach(dropdown => {
-            dropdown.classList.add('hidden');
-          });
-        }
-      });
-    });
-  </script>
+  <script src="mobile-menu.js"></script>
 </body>
 </html>

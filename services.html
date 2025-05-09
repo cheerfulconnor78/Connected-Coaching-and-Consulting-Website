@@ -312,56 +312,8 @@
       </footer>
       
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-  const mobileMenuButton = document.querySelector('.mobile-menu');
-  const mobileDropdown = document.querySelector('.mobile-dropdown');
-  const dropdownButtons = document.querySelectorAll('.mobile-dropdown > button');
-  const desktopDropdownToggles = document.querySelectorAll('.dropdown-toggle');
+<script src="mobile-menu.js"></script>
 
-  mobileMenuButton.addEventListener('click', function() {
-    mobileDropdown.classList.toggle('show');
-  });
-
-  dropdownButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const submenu = this.nextElementSibling;
-      submenu.classList.toggle('hidden');
-    });
-  });
-
-  desktopDropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      const dropdownId = this.getAttribute('data-dropdown');
-      const dropdown = document.getElementById(`${dropdownId}-dropdown`);
-      
-      // Close all other dropdowns
-      document.querySelectorAll('.dropdown-content').forEach(d => {
-        if (d !== dropdown) {
-          d.classList.add('hidden');
-        }
-      });
-
-      // Toggle the clicked dropdown
-      dropdown.classList.toggle('hidden');
-    });
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!mobileMenuButton.contains(e.target) && !mobileDropdown.contains(e.target)) {
-      mobileDropdown.classList.remove('show');
-    }
-
-    if (!e.target.closest('.relative')) {
-      document.querySelectorAll('.dropdown-content').forEach(dropdown => {
-        dropdown.classList.add('hidden');
-      });
-    }
-  });
-});
-
-    </script>
 
 </body>
 </html>
