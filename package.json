@@ -1,0 +1,28 @@
+{
+  "name": "connected-coaching-and-consulting-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./src/styles.css -o ./css/style.css --minify",
+    "dev": "tailwindcss -i ./src/styles.css -o ./css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheerfulconnor78/Connected-Coaching-and-Consulting-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheerfulconnor78/Connected-Coaching-and-Consulting-Website/issues"
+  },
+  "homepage": "https://github.com/cheerfulconnor78/Connected-Coaching-and-Consulting-Website#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11"
+  }
+}
