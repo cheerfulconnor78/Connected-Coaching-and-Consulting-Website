@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
 <!--#include virtual="/pages/en/html/header.html" -->
+</head>
 <body class="bg-white text-black">
   <!--#include virtual="/pages/en/html/catalog.html" -->
   

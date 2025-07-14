@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+<meta name="description" content="Discover real-life case studies of children who grew in confidence, mindset, and happiness through Connected Coaching & Consulting's life coaching programs. See how our coaching empowers kids to thrive and families to flourish.">
 <!--#include virtual="/pages/en/html/header.html" -->
+</head>
 <body class="bg-white text-black">
   <!--#include virtual="/pages/en/html/catalog.html" -->
   

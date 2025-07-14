@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+<meta name="description" content="Connected Coaching & Consulting为6-12岁儿童提供成长教练课程，赋能孩子突破自我、培养自信和积极心态，卓越成长。线上线下课程，立即开启孩子新的人生旅程。">
 <!--#include virtual="/pages/cn/html/header_cn.html" -->
+</head>
 <body class="bg-white text-black">
   <!--#include virtual="/pages/cn/html/catalog_cn.html" -->
   

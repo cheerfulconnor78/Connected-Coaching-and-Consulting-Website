@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta name="description" content="Connected Coaching & Consulting provides WISDOM Coaching for kids, empowering them to develop a growth mindset, self-leadership, resilience, and essential life skills. Help your child thrive with expert coaching and proven success principles.">
 <!--#include virtual="/pages/en/html/header.html" -->
+</head>
 <body class="bg-white text-black">
   <!--#include virtual="/pages/en/html/catalog.html" -->
   

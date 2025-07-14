@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+<meta name="description" content="阅读真实的成长教练案例，见证6-12岁儿童在自信、情绪管理和思维模式等方面的积极转变。家长和孩子们如何通过课程实现幸福、自信和成长。">
 <!--#include virtual="/pages/cn/html/header_cn.html" -->
+</head>
 <body class="bg-white text-black">
   <!--#include virtual="/pages/cn/html/catalog_cn.html" -->
   

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+<meta name="description" content="详细介绍小组课程和个性化一对一成长教练服务，涵盖自信、韧性、情绪管理、领导力等核心技能。专业导师，助力儿童实现心智成长和潜能释放。">
 <!--#include virtual="/pages/cn/html/header_cn.html" -->
+</head>
 <body class="bg-white text-black">
   <!--#include virtual="/pages/cn/html/catalog_cn.html" -->
   
