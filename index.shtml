@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!--#include virtual="/pages/en/html/header.html" -->
 <body class="bg-white text-black">
   <!--#include virtual="/pages/en/html/catalog.html" -->
   
   <main>
-    <!--#include virtual="/pages/en/html/about.html" -->
+    <!--#include virtual="/pages/en/html/index.html" -->
   </main>
 
   <!--#include virtual="/pages/en/html/footer.html" -->

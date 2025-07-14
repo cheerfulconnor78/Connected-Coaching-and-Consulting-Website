@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--#include virtual="/Connected-Coaching-and-Consulting-Website/pages/en/html/header.html" -->
+<!--#include virtual="/pages/en/html/header.html" -->
 <body class="bg-white text-black">
-  <!--#include virtual="/Connected-Coaching-and-Consulting-Website/pages/en/html/catalog.html" -->
+  <!--#include virtual="/pages/en/html/catalog.html" -->
   
   <main>
-    <!--#include virtual="/Connected-Coaching-and-Consulting-Website/pages/en/html/case.html" -->
+    <!--#include virtual="/pages/en/html/case.html" -->
   </main>
 
-  <!--#include virtual="/Connected-Coaching-and-Consulting-Website/pages/en/html/footer.html" -->
+  <!--#include virtual="/pages/en/html/footer.html" -->
 </body>
 </html>
