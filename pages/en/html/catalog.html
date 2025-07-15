@@ -1,25 +1,28 @@
 <!--Catalog-->
-<header class="bg-white shadow-sm sticky top-0 z-50">
+<header class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
 <div class="container mx-auto px-4">
 <div class="flex items-center justify-between h-16">
 <!-- Left side: Logo and Company Name -->
-<div class="flex items-center space-x-4">
+<div class="flex items-center space-x-4 min-w-0 flex-1">
 <img src="/images/logo.webp" alt="Connected Coaching & Consulting Logo" class="h-12 w-auto">
-<h1 class="text-sm md:text-base lg:text-xl font-bold text-teal-600 whitespace-nowrap">Connected Coaching & Consulting</h1>
+<h1 class="    font-bold text-teal-600 whitespace-nowrap 
+    text-xs sm:text-sm md:text-base lg:text-xl
+    truncate
+    min-w-0">Connected Coaching & Consulting</h1>
 </div>
 
 <!-- Center: Navigation -->
 <nav class="hidden md:flex items-center space-x-2">
 <a href="/index.shtml" class="bubble-button text-sm whitespace-nowrap">Home</a>
 <div class="relative">
-  <button class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="about">About</button>
+  <a href="/docs/about.shtml" class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="about">About</a>
   <div class="dropdown-content absolute bg-white shadow-md py-2 rounded-md" id="about-dropdown">
     <a href="/docs/about.shtml#me" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Me</a>
     <a href="/docs/about.shtml#program" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Program</a>
   </div>
 </div>
 <div class="relative">
-  <button class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="services">Services</button>
+  <a href="/docs/services.shtml" class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="about">Services</a>
   <div class="dropdown-content absolute bg-white shadow-md py-2 rounded-md" id="services-dropdown">
     <a href="/docs/services.shtml#group" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Confident Kids Coaching</a>
     <a href="/docs/services.shtml#1on1" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Personalized Coaching</a>
@@ -31,8 +34,8 @@
 </nav>
 
 <!-- Right side: Language and Mobile Menu -->
-<div class="flex items-center space-x-2">
-<a href="/docs_cn/index_cn.shtml" class="bubble-button bg-teal-600 text-white text-sm px-3 py-1 rounded hover:bg-teal-500">中文</a>
+<div class="flex items-center space-x-2 flex-shrink-0">
+<a href="/docs_cn/index_cn.shtml" class="bubble-button bg-teal-600 text-white text-sm px-3 py-1 rounded hover:bg-teal-500 whitespace-nowrap">中文</a>
 <button class="md:hidden mobile-menu">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -42,7 +45,7 @@
 </div>
 
 <!-- Mobile Dropdown Menu -->
-<div class="mobile-dropdown">
+<div class="mobile-dropdown flex items-center space-x-2 flex-shrink-0">
 <a href="/index.shtml" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Home</a>
 <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200">About</button>
 <div class="pl-4 hidden">
