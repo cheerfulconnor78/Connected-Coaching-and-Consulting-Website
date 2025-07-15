@@ -882,31 +882,31 @@ img {
   }
 }
 .index-hero-bg {
-  background-image: url('../images/index/index_banner1.png');
+  background-image: url('../images/index/index_banner1.webp');
 }
 .index-banner-2 {
-  background-image: url('../images/index/index_banner2.png');
+  background-image: url('../images/index/index_banner2.webp');
 }
 .about-hero-bg {
-  background-image: url('../images/about/about_hero1.png');
+  background-image: url('../images/about/about_hero1.webp');
 }
 .about-banner-1 {
-  background-image: url('../images/about/about_banner1.png');
+  background-image: url('../images/about/about_banner1.webp');
 }
 .about-banner-2 {
-  background-image: url('../images/about/about_banner2.png');
+  background-image: url('../images/about/about_banner2.webp');
 }
 .services-hero-bg {
-  background-image: url('../images/service/service_hero1.png');
+  background-image: url('../images/service/service_hero1.webp');
 }
 .services-banner-1 {
-  background-image: url('../images/service/service_banner1.png');
+  background-image: url('../images/service/service_banner1.webp');
 }
 .services-banner-2 {
-  background-image: url('../images/service/service_banner2.png');
+  background-image: url('../images/service/service_banner2.webp');
 }
 .case-hero-bg {
-  background-image: url('../images/case/case_hero1.png');
+  background-image: url('../images/case/case_hero1.webp');
 }
 .index-hero-bg, .index-banner-2, .about-hero-bg, .services-hero-bg, .case-hero-bg, .about-banner-1, .about-banner-2, .about-banner-3, .services-banner-1, .services-banner-2 {
   background-size: cover;

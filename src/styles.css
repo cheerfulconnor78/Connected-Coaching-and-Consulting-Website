@@ -122,22 +122,22 @@ img { max-width: 100%; display: block; }
 /* ========== PAGE-SPECIFIC HERO BACKGROUNDS ========== */
 
 /* index.html */
-.index-hero-bg    { background-image: url('../images/index/index_banner1.png'); }
-.index-banner-2   { background-image: url('../images/index/index_banner2.png'); }
+.index-hero-bg    { background-image: url('../images/index/index_banner1.webp'); }
+.index-banner-2   { background-image: url('../images/index/index_banner2.webp'); }
 
 /* About.html */
-.about-hero-bg    { background-image: url('../images/about/about_hero1.png'); }
-.about-banner-1   { background-image: url('../images/about/about_banner1.png'); }
-.about-banner-2   { background-image: url('../images/about/about_banner2.png'); }
+.about-hero-bg    { background-image: url('../images/about/about_hero1.webp'); }
+.about-banner-1   { background-image: url('../images/about/about_banner1.webp'); }
+.about-banner-2   { background-image: url('../images/about/about_banner2.webp'); }
 
 /* Services.html */
-.services-hero-bg   { background-image: url('../images/service/service_hero1.png'); }
-.services-banner-1  { background-image: url('../images/service/service_banner1.png'); }
-.services-banner-2  { background-image: url('../images/service/service_banner2.png'); }
+.services-hero-bg   { background-image: url('../images/service/service_hero1.webp'); }
+.services-banner-1  { background-image: url('../images/service/service_banner1.webp'); }
+.services-banner-2  { background-image: url('../images/service/service_banner2.webp'); }
 
 /* Case.html (if needed) */
 /* not implemented yet*/
-.case-hero-bg   { background-image: url('../images/case/case_hero1.png'); } 
+.case-hero-bg   { background-image: url('../images/case/case_hero1.webp'); } 
 /* Add others as required */
 
 /* Common hero section sizing/positioning */
