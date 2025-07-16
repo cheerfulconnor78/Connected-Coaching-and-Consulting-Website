@@ -913,6 +913,14 @@ img {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.social-link {
+  color: #888; /* Default icon color */
+  transition: color 0.2s;
+}
+.social-link:hover, .social-link:focus {
+  color: #1DA1F2; /* Example: X(Twitter) Blue, adjust for each platform */
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
