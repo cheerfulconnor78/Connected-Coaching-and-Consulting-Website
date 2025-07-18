@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="description" content="Discover real-life case studies of children who grew in confidence, mindset, and happiness through Connected Coaching & Consulting's life coaching programs. See how our coaching empowers kids to thrive and families to flourish.">
+<title>Contact Us | Connected Coaching & Consulting</title>
+<!--#include virtual="/pages/cn/html/header_cn.html" -->
+</head>
+<script src="/css/contact-time.js"></script>
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<body class="bg-white text-black">
+  <!--#include virtual="/pages/cn/html/catalog_cn.html" -->
+  
+<main class="flex justify-center min-h-screen pt-24 bg-gradient-to-br from-purple-200 via-teal-100 to-yellow-100">
+  <!--#include virtual="/pages/cn/html/contact_cn.html" -->
+</main>
+
+  <!--#include virtual="/pages/cn/html/footer_cn.html" -->
+</body>
+</html>

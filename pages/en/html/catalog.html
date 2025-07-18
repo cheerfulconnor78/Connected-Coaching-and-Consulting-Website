@@ -1,9 +1,9 @@
 <header class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
-  <div class="container mx-auto px-2">
-    <div class="flex items-center h-20 justify-between">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
       <!-- LEFT: Logo/Title -->
       <div class="flex items-center h-full">
-        <div class="flex items-center space-x-4 h-full"> <!-- Use full height of header -->
+        <div class="flex items-center space-x-4 min-w-0 flex-1"> <!-- Use full height of header -->
           <img src="/images/logo.webp" alt="Connected Coaching & Consulting Logo" class="h-12 w-auto">
           <span class="font-bold text-teal-600 whitespace-nowrap text-xs sm:text-sm md:text-base lg:text-xl">
             Connected Coaching & Consulting
@@ -12,7 +12,7 @@
       </div>
 
       <!-- CENTER: Navigation -->
-      <nav class="flex-1 flex justify-center hidden md:flex items-center space-x-2 h-full">
+      <nav class="hidden md:flex items-center space-x-2">
         <a href="/index.shtml" class="bubble-button text-sm whitespace-nowrap">Home</a>
         <div class="relative h-full flex items-center">
           <a href="/docs/about.shtml" class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="about">About</a>
@@ -21,7 +21,7 @@
             <a href="/docs/about.shtml#program" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Program</a>
           </div>
         </div>
-        <div class="relative h-full flex items-center">
+        <div class="relative">
           <a href="/docs/services.shtml" class="bubble-button text-sm whitespace-nowrap dropdown-toggle" data-dropdown="about">Services</a>
           <div class="dropdown-content absolute bg-white shadow-md py-2 rounded-md" id="services-dropdown">
             <a href="/docs/services.shtml#group" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Confident Kids Coaching</a>
@@ -30,13 +30,14 @@
           </div>
         </div>
         <a href="/docs/case.shtml" class="bubble-button text-sm whitespace-nowrap">Case Studies</a>
-        <a href="https://forms.gle/dDbxdmzhCLjb1Bob8" class="bubble-button text-sm whitespace-nowrap">Book a Session</a>
+        <a href="/docs/contact.shtml" class="bubble-button text-sm whitespace-nowrap">Book a Session</a>
       </nav>
 
       <!-- RIGHT: Language selector & mobile menu -->
-      <div class="flex items-center space-x-2 flex-shrink-0 h-full">
-        <a href="/docs_cn/index_cn.shtml"
-          class="bubble-button bg-teal-600 text-white text-sm px-3 py-1 rounded hover:bg-teal-500 whitespace-nowrap">中文</a>
+      <div class="flex items-center space-x-2 flex-shrink-0">
+        <a id="lang-switch-cn" 
+          href="/docs_cn/index_cn.shtml"
+          class="bubble-button bg-teal-600 text-white text-sm px-3 py-1 rounded hover:bg-teal-500">中文</a>
         <button class="md:hidden mobile-menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -113,7 +114,22 @@
         <a href="/docs/services.shtml#faq" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">FAQs</a>
       </div>
       <a href="/docs/case.shtml" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Case Studies</a>
-      <a href="https://forms.gle/dDbxdmzhCLjb1Bob8" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Book a Session</a>
+      <a href="/docs/contact.shtml" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Book a Session</a>
     </div>
   </div>
 </header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var langSwitch = document.getElementById('lang-switch-cn');
+    var path = window.location.pathname;
+    // Match only English pages in /docs/
+    var match = path.match(/^\/docs\/(.+)\.shtml$/);
+    if (match) {
+        var page = match[1];
+        langSwitch.href = "/docs_cn/" + page + "_cn.shtml";
+    } else {
+        langSwitch.href = "/docs_cn/index_cn.shtml";
+    }
+});
+</script>

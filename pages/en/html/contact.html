@@ -1,0 +1,111 @@
+<div id="form-steps" class="w-full max-w-md space-y-4 bg-white p-6 mx-auto rounded shadow-lg mt-16">
+  <!-- Step 1 -->
+  <form id="step1" autocomplete="off">
+    <h1 class="text-2xl font-bold mb-6 text-center">Thank you for your interest in our service! Please take some time to fill out these questions.</h1>
+    <a href="/docs_cn/contact_cn.shtml" class="bubble-button bg-teal-600 text-white text-sm px-3 py-1 rounded hover:bg-teal-500"">中文问卷</a>
+    <div>
+      <label for="name" class="block font-bold mt-3 mb-1">Your Name</label>
+      <input type="text" name="name" id="name" required class="w-full border border-gray-300 rounded px-3 py-2" />
+    </div>
+    <div>
+      <label for="email" class="block font-bold mb-1">Your Email</label>
+      <input type="email" name="email" id="email" required class="w-full border border-gray-300 rounded px-3 py-2" />
+    </div>
+    <div>
+      <label for="WXWA" class="block font-bold mb-1">WeChat or WhatsApp ID</label>
+      <input type="text" name="WXWA" id="WXWA" class="w-full border border-gray-300 rounded px-3 py-2" />
+    </div>
+    <div>
+      <label for="available-time-1" class="block font-bold mb-1">Available Time 1</label>
+      <input type="datetime-local" name="available_time_1" id="available-time-1" required class="w-full border border-gray-300 rounded px-3 py-2" />
+    </div>
+    <div>
+      <label for="available-time-2" class="block font-bold mb-1">Available Time 2</label>
+      <input type="datetime-local" name="available_time_2" id="available-time-2" class="w-full border border-gray-300 rounded px-3 py-2" />
+    </div>
+    <div>
+      <label for="available-time-3" class="block font-bold mb-1">Available Time 3</label>
+      <input type="datetime-local" name="available_time_3" id="available-time-3" class="w-full border border-gray-300 rounded px-3 py-2" />
+    </div>
+    <div class="flex justify-end">
+      <button type="button" id="toStep2"
+    class="px-5 py-2 bg-gray-400 text-white rounded cursor-not-allowed mt-3"
+    disabled>
+    Next
+  </button>
+    </div>
+  </form>
+  <!-- Step 2 -->
+  <form id="step2" action="/php/contact-form-handler.php" method="POST" class="hidden">
+    <h2 class="text-xl font-bold mb-4">Personal Questions (Step 2 of 2)</h2>
+    <div>
+      <label for="challenge" class="block font-bold mb-1">What is the biggest challenge your child is currently facing?</label>
+      <textarea required class="w-full border border-gray-300 rounded px-3 py-2" name="challenge" id="challenge"></textarea>
+    </div>
+    <div>
+      <label for="hope" class="block font-bold mb-1">What problem do you hope to solve for your child with a life coach?</label>
+      <textarea required class="w-full border border-gray-300 rounded px-3 py-2" name="hope" id="hope"></textarea>
+    </div>
+     <div>
+    <label class="block font-bold mb-1 mb-2">Which program are you currently interested in?</label>
+    <div class="flex flex-col space-y-2">
+      <label class="inline-flex items-center">
+        <input type="radio" name="referral_source" value="confidentkids" class="mr-2" required>
+        Confident Kids programs
+      </label>
+      <label class="inline-flex items-center">
+        <input type="radio" name="referral_source" value="personalizedcoaching" class="mr-2">
+        Personalized Coaching Program
+      </label>
+    </div>
+  </div>
+    <div>
+      <label for="preferences" class="block font-bold mb-1">Any special needs or preferences?</label>
+      <textarea required class="w-full border border-gray-300 rounded px-3 py-2" name="preferences" id="preferences"></textarea>
+    </div>
+      <div class="mt-4">
+    <label class="block font-bold mb-1 mb-2">How did you learn about our life coaching services?</label>
+    <div class="flex flex-col space-y-2">
+      <label class="inline-flex items-center">
+        <input type="checkbox" name="outreach[]" value="friend" class="mr-2">
+        Friend Recommendation
+      </label>
+      <label class="inline-flex items-center">
+        <input type="checkbox" name="outreach[]" value="search" class="mr-2">
+        Online Search Engines
+      </label>
+            <label class="inline-flex items-center">
+        <input type="checkbox" name="outreach[]" value="socials" class="mr-2">
+        Social Media
+      </label>
+    </div>
+  </div>
+    <div>
+      <label for="remarks" class="block font-bold mb-1">Remarks (You can leave any other questions or information here)</label>
+      <textarea required class="w-full border border-gray-300 rounded px-3 py-2" name="remarks" id="remarks"></textarea>
+    </div>
+    <div class="flex items-center mt-4">
+  <input type="checkbox" name="consent" id="consent" required class="mr-2">
+  <label for="consent" class="text-sm">
+    I agree that Connected Coaching & Consulting may use the information I have provided in this form for appointment and consultation services.
+  </label>
+</div>
+<div class="flex items-center mt-4">
+  <input type="checkbox" name="me" id="emailme">
+  <label for="emailme" class="text-sm">
+    I'd like to receive a copy of my responses via email.
+  </label>
+</div>
+  
+  <div class="flex justify-between mt-3">
+    <button type="button" id="backToStep1" class="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400">Back</button>
+    <button type="submit" id="submitButton" class="px-4 py-2 bg-gray-400 text-white rounded cursor-not-allowed" disabled>Submit</button>
+  </div>
+</form>
+
+  <!-- Thank You -->
+  <div id="thankYou" class="hidden text-center">
+    <h2 class="text-2xl font-bold mb-3">Thank You!</h2>
+    <p>Your message has been received. We will contact you soon.</p>
+  </div>
+</div>
