@@ -5,6 +5,7 @@
 <title>Connected Coaching & Consulting | Empowering Growth</title>
 <!--#include virtual="/pages/en/html/header.html" -->
 </head>
+<link rel="canonical" href="https://connectedcoaching.jp/" />
 <body class="bg-white text-black">
   <!--#include virtual="/pages/en/html/catalog.html" -->
   
